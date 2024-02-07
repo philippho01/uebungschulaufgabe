@@ -72,7 +72,9 @@ class DatumChart(QChartView):
 
         #series erstellt
         self.series = QLineSeries()
+        self.series2 = QLineSeries()
         self.series.setName("Series")
+        self.series2.setName("Series2")
 
         #Farbe für die Line ändern
         #pen = QPen(QColor(144, 238, 144))
@@ -81,12 +83,14 @@ class DatumChart(QChartView):
 
         #andere methode für farbe hinzufügen
         self.series.setColor(QColor("blue"))
+        self.series2.setColor(QColor("yellow"))
 
 
         #chart erstellt und series hinzufgefügt
         self.chart = QChart()
         self.chart.setTitle("Karte")
         self.chart.addSeries(self.series)
+        self.chart.addSeries(self.series2)
 
         #achsen erstellt und range eingestellt
         axis_y = QValueAxis()
@@ -113,12 +117,20 @@ class DatumChart(QChartView):
         self.series.attachAxis(axis_x)
         self.series.attachAxis(axis_y)
 
+        self.series2.attachAxis(axis_x)
+        self.series2.attachAxis(axis_y)
+
         #werte für die series hinzufügen
         self.series.append(QDateTime.currentDateTime().addDays(-9).toMSecsSinceEpoch(), 1)
         self.series.append(QDateTime.currentDateTime().addDays(-8).toMSecsSinceEpoch(), 2)
         self.series.append(QDateTime.currentDateTime().addDays(-7).toMSecsSinceEpoch(), 3)
         self.series.append(QDateTime.currentDateTime().addDays(-6).toMSecsSinceEpoch(), 4)
-        
+
+        self.series2.append(QDateTime.currentDateTime().addDays(-9).toMSecsSinceEpoch(), 4)
+        self.series2.append(QDateTime.currentDateTime().addDays(-8).toMSecsSinceEpoch(), 5)
+        self.series2.append(QDateTime.currentDateTime().addDays(-7).toMSecsSinceEpoch(), 6)
+        self.series2.append(QDateTime.currentDateTime().addDays(-6).toMSecsSinceEpoch(), 7)
+
 
         #hintergrund farbe ändern
         gruener_hintergrund = QBrush(QColor(0, 255, 0))  # RGB für Grün
