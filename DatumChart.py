@@ -108,6 +108,14 @@ class DatumChart(QChartView):
         end_date = QDateTime.currentDateTime().addDays(-9)
         axis_x.setRange(end_date, start_date)
 
+        #achsen andere farbe
+        axis_x.setLabelsColor(QColor("blue"))
+
+        #grid farbe ändern
+        pen_grid = QPen(QColor("red"))
+        axis_x.setGridLinePen(pen_grid)
+        axis_y.setGridLineColor(QColor("blue"))
+
 
         #achsen dem chart hinzugefügt
         self.chart.addAxis(axis_x, Qt.AlignmentFlag.AlignBottom)
