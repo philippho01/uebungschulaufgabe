@@ -145,4 +145,4 @@ class DatumChart(QChartView):
         self.chart.setBackgroundBrush(gruener_hintergrund)
 
         #chart anzeigen
-        self.setChart(self.chart)
+        self.setChart(self.chart)a

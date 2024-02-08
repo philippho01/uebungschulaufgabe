@@ -58,4 +58,4 @@ class UbungChart(QChartView):
         self.chart.setBackgroundBrush(QBrush(self.background_image))
 
         #chart anzeigen
-        self.setChart(self.chart)
+        self.setChart(self.chart)a

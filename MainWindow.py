@@ -12,4 +12,4 @@ class MainWindow(QMainWindow):
 
 
         #Überschrift des kompletten Feld
-        self.setWindowTitle("Chart Indiana")
+        self.setWindowTitle("Chart Indiana")a

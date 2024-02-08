@@ -19,4 +19,4 @@ class CentralWidget(QWidget):
         layout.addWidget(self.ubungchart)
         layout.addWidget(self.datumchart)
 
-        self.setLayout(layout)
+        self.setLayout(layout)a
